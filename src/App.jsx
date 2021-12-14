@@ -8,6 +8,7 @@ import {
 import routes from '@/router'
 import {ConfigProvider} from 'zarm'
 import zhCN from 'zarm/lib/config-provider/locale/zh_CN'
+import NavBar from '@/components/NavBar'
 
 function App() {
   return <Router>
@@ -20,6 +21,7 @@ function App() {
         }
       </Routes>
     </ConfigProvider>
+    <NavBar showNav={true}/>
   </Router>
 }
 
