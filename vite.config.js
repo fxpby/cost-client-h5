@@ -19,5 +19,15 @@ export default defineConfig({
         }
       ]
     }
-  )]
+  )],
+  css: {
+    modules: {
+      localsConvention: 'dashesOnly'
+    },
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      }
+    }
+  }
 })
