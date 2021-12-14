@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import path from 'path'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import styleImport from 'vite-plugin-style-import'
 import react from '@vitejs/plugin-react'
@@ -27,6 +28,22 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         javascriptEnabled: true,
+      }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      'utils': path.resolve(__dirname, 'src/utils')
+    }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://olumel.top/api/',
+        changeOrigin: true,
+        // 将 /api 重写为空
+        rewrite: path => path.replace(/^\/api/, '')
       }
     }
   }

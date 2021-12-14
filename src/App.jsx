@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import './App.css'
+import '@/App.css'
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from 'react-router-dom'
-import routes from './router'
+import routes from '@/router'
 import {ConfigProvider} from 'zarm'
 import zhCN from 'zarm/lib/config-provider/locale/zh_CN'
 
