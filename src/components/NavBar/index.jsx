@@ -6,8 +6,7 @@ import CustomIcon from '../CustomIcon'
 import s from './style.module.less';
 
 const NavBar = ({ showNav }) => {
-  const [activeKey, setActiveKey] = useState('/')
-  // const [activeKey, setActiveKey] = useState(useLocation().pathname);
+  const [activeKey, setActiveKey] = useState(useLocation().pathname);
   const navigateTo = useNavigate()
 
   const changeTab = (path) => {
