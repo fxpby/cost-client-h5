@@ -7,11 +7,11 @@ import s from './style.module.less';
 const NavBar = ({ showNav }) => {
   const [activeKey, setActiveKey] = useState('/')
   // const [activeKey, setActiveKey] = useState(useLocation().pathname);
-  const history = useNavigate()
+  const navigateTo = useNavigate()
 
   const changeTab = (path) => {
     setActiveKey(path)
-    history.push(path)
+    navigateTo(path)
   }
 
   return (
