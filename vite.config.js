@@ -40,7 +40,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://olumel.top/api/',
+        target: 'http://127.0.0.1:7001',
         changeOrigin: true,
         // 将 /api 重写为空
         rewrite: path => path.replace(/^\/api/, '')
